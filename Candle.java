@@ -1,24 +1,29 @@
-
 public class Candle{
 	
-	String color = "placeholder";
-	int height = 0;
-	double price = 0;
-	
-	public static void setColor(String color){
+	static String color = "placeholder";
+	static int height = 0;
+	static double price = 0;
+	Candle(){
 		
 	}
-	public static void setHeight(int height){
-		
-		
+	Candle(String c, int h){
+		setColor(c);
+		setHeight(h);
 	}
-	public double getPrice(){
-		
+	public void setColor(String c){
+		color = c;
 	}
-	public String getColor(){
+	public void setHeight(int h){
+		height = h;
+		price = (h*2);
+	}
+	public static double getPrice(){
+		return price;
+	}
+	public static String getColor(){
 		return color;
 	}
-	public int getHeight(){
+	public static int getHeight(){
 		return height;
 	}
 }
